@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduLearn – Mokykis su džiaugsmu</title>
+<title>eduPULSE – Mokykis su džiaugsmu</title>
 <meta name="description" content="Interaktyvi edukacinė platforma 5–10 klasių mokiniams. Anglų kalba ir matematika žaidžiant – XP, monetos, apdovanojimai!">
-<meta property="og:title" content="EduLearn – Mokykis su džiaugsmu">
+<meta property="og:title" content="eduPULSE – Mokykis su džiaugsmu">
 <meta property="og:description" content="Anglų kalba ir matematika 5–10 klasių mokiniams. Žaisk ir mokykis!">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
@@ -161,6 +161,12 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 .bnav-i.active{color:var(--pr)}.bi-ic{font-size:1.3rem}.bi-lb{font-size:.7rem;font-weight:700}
 @media(max-width:768px){.sidenav{display:none}.bnav{display:block}.dash-wrap,.subj-wrap,.lesson-wrap,.shop-wrap,.prof-wrap{padding-bottom:5rem}}
 @media(max-width:600px){.subj-cards{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(3,1fr)}.theme-cards{grid-template-columns:1fr}.nav-stats .spill:last-child{display:none}}
+
+/* eduPULSE refreshed wordmark */
+.pulse-brand{font-family:"Fredoka One","Nunito",sans-serif;letter-spacing:.4px;display:inline-block;white-space:nowrap;filter:drop-shadow(0 3px 4px rgba(124,92,191,.12))}
+.pulse-brand>span{background:linear-gradient(110deg,#fa3299,#ff7948,#7d55e7);-webkit-background-clip:text;background-clip:text;color:transparent;animation:pulseGlow 3s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.25)}}
+@media(prefers-reduced-motion:reduce){.pulse-brand>span{animation:none}}
 </style>
 </head>
 <body>
@@ -181,7 +187,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <div class="screen active" id="screen-theme">
   <div style="display:flex;align-items:center;justify-content:center;flex:1;padding:2rem;background:linear-gradient(135deg,#7C5CBF,#FF7043)">
     <div class="theme-box">
-      <h1>EduLearn ✨</h1>
+      <h1><span class="pulse-brand">edu<span>PULSE</span></span> ✨</h1>
       <p>Pasirink savo stilių ir pradėk mokytis!</p>
       <div class="theme-cards">
         <div class="theme-card tc-w" onclick="chooseTheme('whimsical')"><div class="theme-icon">🌸</div><h2>Žaismingasis</h2><p>Pastelės, magija ir džiaugsmas</p></div>
@@ -195,7 +201,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <div class="screen" id="screen-auth">
   <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:2rem">
     <div class="auth-card">
-      <div class="auth-logo"><h1>EduLearn</h1><p>Mokymasis su džiaugsmu 🚀</p></div>
+      <div class="auth-logo"><h1><span class="pulse-brand">edu<span>PULSE</span></span></h1><p>Mokymasis su džiaugsmu 🚀</p></div>
       <div class="auth-tabs">
         <button class="auth-tab active" onclick="swAuth('login',this)">Prisijungti</button>
         <button class="auth-tab" onclick="swAuth('reg',this)">Registruotis</button>
@@ -228,7 +234,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <!-- DASHBOARD -->
 <div class="screen" id="screen-dashboard">
   <nav class="nav">
-    <div class="nav-logo">EduLearn</div>
+    <div class="nav-logo"><span class="pulse-brand">edu<span>PULSE</span></span></div>
     <div class="nav-stats">
       <div class="spill sp-xp"><span>⚡</span><span id="nxp">0</span></div>
       <div class="spill sp-cn"><span>🪙</span><span id="ncn">0</span></div>
@@ -286,7 +292,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <!-- SUBJECT -->
 <div class="screen" id="screen-subject">
   <nav class="nav">
-    <div class="nav-logo">EduLearn</div>
+    <div class="nav-logo"><span class="pulse-brand">edu<span>PULSE</span></span></div>
     <div class="nav-stats"><div class="spill sp-xp"><span>⚡</span><span id="nxp2">0</span></div><div class="spill sp-cn"><span>🪙</span><span id="ncn2">0</span></div></div>
     <div class="nav-av">👤</div>
   </nav>
@@ -307,7 +313,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <!-- LESSON -->
 <div class="screen" id="screen-lesson">
   <nav class="nav">
-    <div class="nav-logo">EduLearn</div>
+    <div class="nav-logo"><span class="pulse-brand">edu<span>PULSE</span></span></div>
     <div class="nav-stats"><div class="spill sp-xp"><span>⚡</span><span id="nxp3">0</span></div><div class="spill sp-cn"><span>🪙</span><span id="ncn3">0</span></div></div>
     <div class="nav-av">👤</div>
   </nav>
@@ -325,7 +331,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <!-- SHOP -->
 <div class="screen" id="screen-shop">
   <nav class="nav">
-    <div class="nav-logo">EduLearn</div>
+    <div class="nav-logo"><span class="pulse-brand">edu<span>PULSE</span></span></div>
     <div class="nav-stats"><div class="spill sp-cn"><span>🪙</span><span id="ncnS">0</span></div></div>
     <div class="nav-av" onclick="showScreen('screen-profile')">👤</div>
   </nav>
@@ -353,7 +359,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;
 <!-- PROFILE -->
 <div class="screen" id="screen-profile">
   <nav class="nav">
-    <div class="nav-logo">EduLearn</div>
+    <div class="nav-logo"><span class="pulse-brand">edu<span>PULSE</span></span></div>
     <div class="nav-stats"><div class="spill sp-xp"><span>⚡</span><span id="nxpP">0</span></div></div>
     <div class="nav-av">👤</div>
   </nav>
@@ -1338,7 +1344,7 @@ function toast(msg){const t=T('toast');t.textContent=msg;t.classList.add('show')
 function confetti(){const w=T('confW');w.innerHTML='';const cols=['#7C5CBF','#FF7043','#FFB300','#43A047','#2196F3','#E91E63'];for(let i=0;i<45;i++){const el=document.createElement('div');el.className='cp';el.style.left=Math.random()*100+'vw';el.style.background=cols[Math.floor(Math.random()*6)];el.style.animationDelay=Math.random()*.8+'s';el.style.animationDuration=(1.5+Math.random())+'s';const sz=8+Math.random()*8;el.style.width=el.style.height=sz+'px';w.appendChild(el);}setTimeout(()=>w.innerHTML='',3200);}
 function save(){if(!S.user)return;try{localStorage.setItem('el_'+S.user,JSON.stringify(S));}catch(e){}}
 
-/* ─── EDULEARN UPDATE 2026-05: A1–C2 TESTAS + DAUGIAU UŽDUOČIŲ ─── */
+/* ─── eduPULSE UPDATE 2026-05: A1–C2 TESTAS + DAUGIAU UŽDUOČIŲ ─── */
 (function(){
   // Išplečiamas pradinis anglų kalbos lygio testas iki A1–C2.
   PT.length = 0;
